@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,170 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue background" translatesAutoresizingMaskIntoConstraints="NO" id="uHj-hB-Oeg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxJ-Do-dus">
+                                <rect key="frame" x="238" y="427" width="68" height="47"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                <state key="normal" title="25%">
+                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapped15:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BL-p0-IM8"/>
+                                    <action selector="onTapped25:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aw3-f0-59O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1v-vN-zPQ">
+                                <rect key="frame" x="77" y="33" width="220" height="41"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="35"/>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUz-1Z-YO0">
+                                <rect key="frame" x="121" y="128" width="133" height="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVT-f0-9gk">
+                                <rect key="frame" x="65" y="310" width="68" height="47"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                <state key="normal" title="10%">
+                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapped10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1iD-38-JtR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wus-wV-VEg">
+                                <rect key="frame" x="238" y="310" width="68" height="47"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                <state key="normal" title="20%">
+                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapped20:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKj-jc-3qO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUI-nW-CIw">
+                                <rect key="frame" x="45" y="234" width="285" height="32"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="27"/>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0X-nT-YjG">
+                                <rect key="frame" x="66" y="176" width="242" height="29"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6W-4u-xHV">
+                                <rect key="frame" x="120" y="205" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-bL-GTz">
+                                <rect key="frame" x="65" y="427" width="68" height="47"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                <state key="normal" title="15%">
+                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapped15:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mw4-wx-myS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVG-XA-8pP">
+                                <rect key="frame" x="161" y="505" width="52" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="5BZ-PV-UGA"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chevron-up 2"/>
+                                <connections>
+                                    <action selector="onTappedArrowUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VaY-Jv-TFV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg3-Un-CAU">
+                                <rect key="frame" x="161" y="571" width="52" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="xo0-7y-aKm"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chevron-down"/>
+                                <connections>
+                                    <action selector="onTappedArrowDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wde-qB-gyA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tn-Hf-4Zg">
+                                <rect key="frame" x="163" y="543" width="49" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.99678093194961548" green="0.75133299827575684" blue="0.0" alpha="0.99607843160629272" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077180363237857819" green="0.75846201181411743" blue="0.85194700956344604" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p0X-nT-YjG" firstAttribute="centerX" secondItem="B6W-4u-xHV" secondAttribute="centerX" id="6Z4-eR-7OQ"/>
+                            <constraint firstItem="2Tn-Hf-4Zg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="6ZG-rQ-xAJ"/>
+                            <constraint firstItem="HVT-f0-9gk" firstAttribute="baseline" secondItem="Wus-wV-VEg" secondAttribute="baseline" id="8bA-ng-ntR"/>
+                            <constraint firstItem="HVT-f0-9gk" firstAttribute="top" secondItem="VUI-nW-CIw" secondAttribute="bottom" constant="44" id="8iR-cc-tpB"/>
+                            <constraint firstItem="VUI-nW-CIw" firstAttribute="top" secondItem="B6W-4u-xHV" secondAttribute="bottom" constant="8" symbolic="YES" id="8vR-2c-Sbn"/>
+                            <constraint firstItem="sVG-XA-8pP" firstAttribute="leading" secondItem="yg3-Un-CAU" secondAttribute="leading" id="AAg-p5-dTh"/>
+                            <constraint firstItem="KUz-1Z-YO0" firstAttribute="top" secondItem="Q1v-vN-zPQ" secondAttribute="bottom" constant="54" id="E60-qc-ZSG"/>
+                            <constraint firstItem="VUI-nW-CIw" firstAttribute="centerX" secondItem="sVG-XA-8pP" secondAttribute="centerX" id="KOl-Xd-U2o"/>
+                            <constraint firstItem="uHj-hB-Oeg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MNF-96-O80"/>
+                            <constraint firstItem="yg3-Un-CAU" firstAttribute="top" secondItem="sVG-XA-8pP" secondAttribute="bottom" constant="24" id="MkU-5p-8uN"/>
+                            <constraint firstItem="VUI-nW-CIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="NmI-aD-nTK"/>
+                            <constraint firstItem="Q1v-vN-zPQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="PLj-Eh-VN9"/>
+                            <constraint firstItem="uHj-hB-Oeg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Te5-t8-zDT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Tn-Hf-4Zg" secondAttribute="bottom" constant="94" id="Vh9-Uv-DUC"/>
+                            <constraint firstItem="Wus-wV-VEg" firstAttribute="leading" secondItem="bxJ-Do-dus" secondAttribute="leading" id="VrX-1h-fX3"/>
+                            <constraint firstItem="KUz-1Z-YO0" firstAttribute="centerX" secondItem="p0X-nT-YjG" secondAttribute="centerX" id="XU2-vI-wPE"/>
+                            <constraint firstItem="uHj-hB-Oeg" firstAttribute="centerX" secondItem="Q1v-vN-zPQ" secondAttribute="centerX" id="YfB-CL-Rij"/>
+                            <constraint firstItem="uHj-hB-Oeg" firstAttribute="centerY" secondItem="Wus-wV-VEg" secondAttribute="centerY" id="aEr-7M-FPH"/>
+                            <constraint firstItem="HVT-f0-9gk" firstAttribute="leading" secondItem="4a9-bL-GTz" secondAttribute="leading" id="cE5-cb-ojB"/>
+                            <constraint firstItem="sVG-XA-8pP" firstAttribute="trailing" secondItem="yg3-Un-CAU" secondAttribute="trailing" id="f5g-tU-Qfk"/>
+                            <constraint firstItem="p0X-nT-YjG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="fcY-s0-9OB"/>
+                            <constraint firstItem="B6W-4u-xHV" firstAttribute="centerX" secondItem="VUI-nW-CIw" secondAttribute="centerX" id="fmJ-0O-juV"/>
+                            <constraint firstAttribute="trailing" secondItem="uHj-hB-Oeg" secondAttribute="trailing" id="h8d-Bs-WHN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yg3-Un-CAU" secondAttribute="bottom" constant="54" id="ibe-5d-szf"/>
+                            <constraint firstItem="4a9-bL-GTz" firstAttribute="top" secondItem="HVT-f0-9gk" secondAttribute="bottom" constant="70" id="j46-hL-oa1"/>
+                            <constraint firstItem="HVT-f0-9gk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="jOi-hC-fKi"/>
+                            <constraint firstItem="Q1v-vN-zPQ" firstAttribute="centerX" secondItem="KUz-1Z-YO0" secondAttribute="centerX" id="kjO-Dk-X2p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wus-wV-VEg" secondAttribute="trailing" constant="69" id="lG6-8y-Aan"/>
+                            <constraint firstItem="p0X-nT-YjG" firstAttribute="top" secondItem="KUz-1Z-YO0" secondAttribute="bottom" constant="15" id="rLU-Pp-ZxG"/>
+                            <constraint firstItem="sVG-XA-8pP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161" id="sWj-Ld-vdO"/>
+                            <constraint firstItem="uHj-hB-Oeg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sdT-D3-KaY"/>
+                            <constraint firstItem="4a9-bL-GTz" firstAttribute="baseline" secondItem="bxJ-Do-dus" secondAttribute="baseline" id="tmM-S9-NcO"/>
+                            <constraint firstItem="sVG-XA-8pP" firstAttribute="centerX" secondItem="2Tn-Hf-4Zg" secondAttribute="centerX" id="wt3-8f-ihF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="newTotalLabel" destination="VUI-nW-CIw" id="CmJ-7P-GLj"/>
+                        <outlet property="personCount" destination="2Tn-Hf-4Zg" id="Web-0h-zr4"/>
+                        <outlet property="tipLabel" destination="p0X-nT-YjG" id="dcH-Ue-o3Y"/>
+                        <outlet property="totalCostTextField" destination="KUz-1Z-YO0" id="6cz-gS-582"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue background" width="320" height="568"/>
+        <image name="chevron-down" width="1600" height="1600"/>
+        <image name="chevron-up 2" width="1600" height="1600"/>
+    </resources>
 </document>
